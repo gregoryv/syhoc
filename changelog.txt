@@ -1,0 +1,8 @@
+§B Changelog
+
+All major changes to this project will be noted in this file.
+
+0.1.0-dev
+
+- Define format rules
+
