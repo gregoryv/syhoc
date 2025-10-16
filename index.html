@@ -2,7 +2,7 @@
 
 <meta charset="utf-8">
 <pre>
-            Tagged requirements in plain text specifications
+            Format rules for plain-text specifications
 
                             by Gregory Vincic
 
@@ -12,8 +12,10 @@ Abstract
 
    Specifications need to be concise and correct.  Preformated RFC like
    documents are easy to read and many follow <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a> for phrasing
-   requirements.  This document specifies rules for writing plain text
-   specifications with tagged requirements for further processing.
+   requirements.  This document defines rules for authoring plain-text
+   specifications and tagging requirements for easy reference.
+
+
 
 
 
@@ -37,11 +39,11 @@ Table of Contents
 
 <a id="section-1" href="#section-1">1</a> Introduction
 
-   Plain text documents, i.e. RFC series, have a proven track record as
+   Plain-text documents, i.e. RFC series, have a proven track record as
    workable specifications.  These documents have been enhanced and
    clarified over time by subsequent sepcifications like the <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>.
    Specifications that govern software are often written in this format.
-   There is however no easy way to refer to requirements directly when
+   There is however no easy way to reference requirements directly when
    validating software.  A test suite could e.g. use the wording of a
    requirement verbatim if it fails, but duplicating the text within a
    test is not feasible as requirements change over time.  Having a way
@@ -52,7 +54,7 @@ Table of Contents
 
 <a id="section-1.1" href="#section-1.1">1.1</a> Purpose
 
-   Specify minimal format rules to plain text documents which enables
+   Specify minimal format rules to plain-text documents which enables
    developers to use processing tools, like <a href="https://github.com/gregoryv/mkdoc">mkdoc</a>, when producing the
    final document.  The final document in this context is a preformatted
    HTML file.
@@ -71,6 +73,7 @@ Table of Contents
    Main purpose of formatting rules is to enable writers and readers to
    focus on content as much as possible and secondary enable tooling to
    process them for improved presentation or automated consumption.
+   <a href="https://gregoryv.github.io/water/spec.txt">This document</a> is written following these rules.
 
 
 <a id="section-2.1" href="#section-2.1">2.1</a> Sections
@@ -180,7 +183,6 @@ Table of Contents
    0.1.0-dev
 
    - Define format rules
-
 
 
 

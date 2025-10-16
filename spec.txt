@@ -1,4 +1,4 @@
-         Tagged requirements in plain text specifications
+            Format rules for plain-text specifications
 
                          by Gregory Vincic
 
@@ -8,8 +8,10 @@ Abstract
 
 Specifications need to be concise and correct.  Preformated RFC like
 documents are easy to read and many follow [RFC 2119] for phrasing
-requirements.  This document specifies rules for writing plain text
-specifications with tagged requirements for further processing.
+requirements.  This document defines rules for authoring plain-text
+specifications and tagging requirements for easy reference.
+
+
 
 
 
@@ -18,11 +20,11 @@ Table of Contents
 
 §1 Introduction
 
-Plain text documents, i.e. RFC series, have a proven track record as
+Plain-text documents, i.e. RFC series, have a proven track record as
 workable specifications.  These documents have been enhanced and
 clarified over time by subsequent sepcifications like the [RFC 2119].
 Specifications that govern software are often written in this format.
-There is however no easy way to refer to requirements directly when
+There is however no easy way to reference requirements directly when
 validating software.  A test suite could e.g. use the wording of a
 requirement verbatim if it fails, but duplicating the text within a
 test is not feasible as requirements change over time.  Having a way
@@ -33,7 +35,7 @@ over time.
 
 §1.1 Purpose
 
-Specify minimal format rules to plain text documents which enables
+Specify minimal format rules to plain-text documents which enables
 developers to use processing tools, like [mkdoc], when producing the
 final document.  The final document in this context is a preformatted
 HTML file.
@@ -52,6 +54,7 @@ document are to be interpreted as described in [RFC 2119] [1].
 Main purpose of formatting rules is to enable writers and readers to
 focus on content as much as possible and secondary enable tooling to
 process them for improved presentation or automated consumption.
+[This document] is written following these rules.
 
 
 §2.1 Sections
@@ -142,7 +145,7 @@ separate section.  In this document see (§3).
 [example.com]: https://example.com
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
 [mkdoc]: https://github.com/gregoryv/mkdoc
-
+[This document]: https://gregoryv.github.io/water/spec.txt
 
 
 
