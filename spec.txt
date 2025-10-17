@@ -36,7 +36,7 @@ over time.
 §1.1 Purpose
 
 Specify minimal format rules to plain-text documents which enables
-developers to use processing tools, like [mkdoc], when producing the
+developers to use processing tools, like [stp], when producing the
 final document.  The final document in this context is a preformatted
 HTML file.
 
@@ -72,7 +72,7 @@ heading.
 Requirement links SHOULD(#R7) be written within parenthesis and start with
 '#R' followed by a number.
 
-    &lpar;#R7&rpar;
+    "... (#R7) ..."
 
 Reuirement links MUST(#R8) be placed directly after one of the
 keywords as defined by [RFC 2119].
@@ -82,19 +82,19 @@ keywords as defined by [RFC 2119].
 
 Links to sections MUST(#R2) be written within parentheses.
 
-    "... (&sect;9.1)."
+    "... (§9.1) ..."
 
 Transformed links to sections SHOULD(#R3) replace the § sign with the
 word 'section'.
 
-    "... (section 9.1)."
+    "... (section 9.1) ..."
 
 
 §2.2.3 External Links
 
 External links SHOULD(#R4) be written within square brackets.
 
-    "&lbrack;RFC 2119&rbrack;"
+    "... [RFC 2119] ..."
 
 URL's of external links SHOULD(#R5) be defined on separate lines.
 Preferably at the end of a document or section.
@@ -109,7 +109,7 @@ URL defined lines SHOULD(#R9) be removed from the final document.
 Internal reference links SHOULD(#R6) be written within square
 brackets.
 
-    "... see [1]."
+    "... see [1] ..."
 
 These links refer to a list of references in the same document.  In
 this document see (§3).
@@ -145,7 +145,7 @@ this document see (§3).
 
 [example.com]: https://example.com
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
-[mkdoc]: https://github.com/gregoryv/mkdoc
+[stp]: https://github.com/gregoryv/stp
 [source of this document]: https://gregoryv.github.io/water/spec.txt
 
 
