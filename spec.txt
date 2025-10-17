@@ -1,18 +1,27 @@
-            Format rules for plain-text specifications
+           Format rules for plain-text specifications
 
-                         by Gregory Vincic
+                            by
+
+                      Gregory Vincic
+
+
 
 
 
 Abstract
 
 Specifications need to be concise and correct.  Preformated
-plain-text documents are easy to read and many follow [RFC 2119] for
-when phrasing requirements.  This document defines rules for
-authoring plain-text specifications and tagging requirements for easy
-reference.
+plain-text documents are easy to read and many follow [RFC 2119] when
+phrasing requirements.  This document defines rules for authoring
+plain-text specifications and tagging requirements in particular.
 
 
+Status of This Memo
+
+This document is not an Internet Standards Track specification; it is
+published for examination, experimental implementation, and
+evaluation.  The revision controlled source of this document is
+available at [syhoc/spec.txt].
 
 
 
@@ -164,7 +173,7 @@ this document see (§3).
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
 [stp]: https://github.com/gregoryv/stp
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
-
+[syhoc/spec.txt]: https://github.com/gregoryv/syhoc/blob/main/spec.txt
 
 
 
