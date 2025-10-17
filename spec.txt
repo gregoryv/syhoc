@@ -80,13 +80,14 @@ keywords as defined by [RFC 2119].
 
 §2.2.2 Links to Sections
 
-Section links MUST(#R2) be written within parentheses.
+Links to sections MUST(#R2) be written within parentheses.
 
-    "... (&sect;2.1)."
+    "... (&sect;9.1)."
 
-Link sections SHOULD(#R3) replace the § sign with the word 'section'.
+Transformed links to sections SHOULD(#R3) replace the § sign with the
+word 'section'.
 
-    "... (§2.1)."
+    "... (section 9.1)."
 
 
 §2.2.3 External Links
@@ -110,8 +111,8 @@ brackets.
 
     "... see [1]."
 
-These links refer to a list of references, most likely found in a
-separate section.  In this document see (§3).
+These links refer to a list of references in the same document.  In
+this document see (§3).
 
 
 
