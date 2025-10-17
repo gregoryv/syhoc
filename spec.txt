@@ -54,7 +54,7 @@ document are to be interpreted as described in [RFC 2119] [1].
 Main purpose of formatting rules is to enable writers and readers to
 focus on content as much as possible and secondary enable tooling to
 process them for improved presentation or automated consumption.
-[This document] is written following these rules.
+The [source of this document] is written following these rules.
 
 
 §2.1 Sections
@@ -145,7 +145,7 @@ separate section.  In this document see (§3).
 [example.com]: https://example.com
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
 [mkdoc]: https://github.com/gregoryv/mkdoc
-[This document]: https://gregoryv.github.io/water/spec.txt
+[source of this document]: https://gregoryv.github.io/water/spec.txt
 
 
 
