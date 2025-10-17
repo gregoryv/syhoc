@@ -64,21 +64,28 @@ heading.
 
     §9.1.5 Example Heading
 
-§2.2 Links
 
+§2.2 Requirement Identifiers
 
-§2.2.1 Requirement Links
-
-Requirement links SHOULD(#R7) be written within parenthesis and start with
-'#R' followed by a number.
+Without requirement identifiers it's hard to reference them at the
+source.  Requirement identifiers SHOULD(#R7) be written within
+parenthesis and start with '#R' followed by a number.
 
     "... (#R7) ..."
+
+Requirement identifiers MUST(#R10) be unique within one
+specification.
+
+Once a requirement identifier has been assigned and specification
+published, it MUST NOT(#R11) be reused.
+
+§2.3 Links
 
 Reuirement links MUST(#R8) be placed directly after one of the
 keywords as defined by [RFC 2119].
 
 
-§2.2.2 Links to Sections
+§2.3.1 Links to Sections
 
 Links to sections MUST(#R2) be written within parentheses.
 
@@ -90,7 +97,7 @@ word 'section'.
     "... (section 9.1) ..."
 
 
-§2.2.3 External Links
+§2.3.2 External Links
 
 Within a body of test external links and their URL make them less
 readable.  By separating the phrase that should be linked and the URL
@@ -109,7 +116,7 @@ Lines defining URL's for external link phrases MAY(#R9) be removed
 from the final document.
 
 
-§2.2.4 Internal Reference Links
+§2.3.3 Internal Reference Links
 
 Internal reference links SHOULD(#R6) be written within square
 brackets.

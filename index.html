@@ -26,11 +26,11 @@ Table of Contents
 <a href="#section-1.2">1.2</a>   Requirements  .................................................
 <a href="#section-2">2</a>   Format Rules  ...................................................
 <a href="#section-2.1">2.1</a>   Sections  .....................................................
-<a href="#section-2.2">2.2</a>   Links  ........................................................
-<a href="#section-2.2.1">2.2.1</a>   Requirement Links  ..........................................
-<a href="#section-2.2.2">2.2.2</a>   Links to Sections  ..........................................
-<a href="#section-2.2.3">2.2.3</a>   External Links  .............................................
-<a href="#section-2.2.4">2.2.4</a>   Internal Reference Links  ...................................
+<a href="#section-2.2">2.2</a>   Requirement Identifiers  ......................................
+<a href="#section-2.3">2.3</a>   Links  ........................................................
+<a href="#section-2.3.1">2.3.1</a>   Links to Sections  ..........................................
+<a href="#section-2.3.2">2.3.2</a>   External Links  .............................................
+<a href="#section-2.3.3">2.3.3</a>   Internal Reference Links  ...................................
 <a href="#section-3">3</a>   References  .....................................................
 <a href="#section-A">A</a>   Appendix  .......................................................
 <a href="#section-A.1">A.1</a>   Requirements  .................................................
@@ -83,21 +83,28 @@ Table of Contents
 
        §9.1.5 Example Heading
 
-<a id="section-2.2" href="#section-2.2">2.2</a> Links
 
+<a id="section-2.2" href="#section-2.2">2.2</a> Requirement Identifiers
 
-<a id="section-2.2.1" href="#section-2.2.1">2.2.1</a> Requirement Links
-
-   Requirement links SHOULD<sub><a id="R7" href="#R7">7</a></sub> be written within parenthesis and start with
-   '#R' followed by a number.
+   Without requirement identifiers it's hard to reference them at the
+   source.  Requirement identifiers SHOULD<sub><a id="R7" href="#R7">7</a></sub> be written within
+   parenthesis and start with '#R' followed by a number.
 
        "... (#R7) ..."
+
+   Requirement identifiers MUST<sub><a id="R10" href="#R10">10</a></sub> be unique within one
+   specification.
+
+   Once a requirement identifier has been assigned and specification
+   published, it MUST NOT<sub><a id="R11" href="#R11">11</a></sub> be reused.
+
+<a id="section-2.3" href="#section-2.3">2.3</a> Links
 
    Reuirement links MUST<sub><a id="R8" href="#R8">8</a></sub> be placed directly after one of the
    keywords as defined by <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>.
 
 
-<a id="section-2.2.2" href="#section-2.2.2">2.2.2</a> Links to Sections
+<a id="section-2.3.1" href="#section-2.3.1">2.3.1</a> Links to Sections
 
    Links to sections MUST<sub><a id="R2" href="#R2">2</a></sub> be written within parentheses.
 
@@ -109,7 +116,7 @@ Table of Contents
        "... (section 9.1) ..."
 
 
-<a id="section-2.2.3" href="#section-2.2.3">2.2.3</a> External Links
+<a id="section-2.3.2" href="#section-2.3.2">2.3.2</a> External Links
 
    Within a body of test external links and their URL make them less
    readable.  By separating the phrase that should be linked and the URL
@@ -128,7 +135,7 @@ Table of Contents
    from the final document.
 
 
-<a id="section-2.2.4" href="#section-2.2.4">2.2.4</a> Internal Reference Links
+<a id="section-2.3.3" href="#section-2.3.3">2.3.3</a> Internal Reference Links
 
    Internal reference links SHOULD<sub><a id="R6" href="#R6">6</a></sub> be written within square
    brackets.
@@ -173,14 +180,19 @@ Table of Contents
    <a href="#R6">R6</a> Internal reference links SHOULD be written within square
       brackets.
 
-   <a href="#R7">R7</a> Requirement links SHOULD be written within parenthesis and start
-      with '#R' followed by a number.
+   <a href="#R7">R7</a> Requirement identifiers SHOULD be written within parenthesis and
+      start with '#R' followed by a number.
 
    <a href="#R8">R8</a> Reuirement links MUST be placed directly after one of the
       keywords as defined by <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>.
 
    <a href="#R9">R9</a> Lines defining URL's for external link phrases MAY be removed
       from the final document.
+
+   <a href="#R10">R10</a> Requirement identifiers MUST be unique within one specification.
+
+   <a href="#R11">R11</a> Once a requirement identifier has been assigned and
+       specification published, it MUST NOT be reused.
 
 
 
