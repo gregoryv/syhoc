@@ -6,16 +6,19 @@
 
 Abstract
 
-Specifications need to be concise and correct.  Preformated RFC like
-documents are easy to read and many follow [RFC 2119] for phrasing
-requirements.  This document defines rules for authoring plain-text
-specifications and tagging requirements for easy reference.
+Specifications need to be concise and correct.  Preformated
+plain-text documents are easy to read and many follow [RFC 2119] for
+when phrasing requirements.  This document defines rules for
+authoring plain-text specifications and tagging requirements for easy
+reference.
 
 
 
 
 
 Table of Contents
+
+
 
 
 §1 Introduction
@@ -62,7 +65,7 @@ The [source of this document] is written following these rules.
 Sections SHOULD(#R1) start with the § sign followed by a level and a
 heading.
 
-    §9.1.5 Example Heading
+    "§9.1 Example Heading..."
 
 
 §2.2 Requirement Identifiers
@@ -78,6 +81,7 @@ specification.
 
 Once a requirement identifier has been assigned and specification
 published, it MUST NOT(#R11) be reused.
+
 
 §2.3 Links
 
@@ -125,6 +129,7 @@ brackets.
 
 These links refer to a list of references in the same document.  In
 this document see (§3).
+
 
 
 
