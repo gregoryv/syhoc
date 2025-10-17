@@ -92,16 +92,21 @@ word 'section'.
 
 §2.2.3 External Links
 
-External links SHOULD(#R4) be written within square brackets.
+Within a body of test external links and their URL make them less
+readable.  By separating the phrase that should be linked and the URL
+readability is improved.
 
-    "... [RFC 2119] ..."
+External link phrase SHOULD(#R4) be written within square brackets.
 
-URL's of external links SHOULD(#R5) be defined on separate lines.
-Preferably at the end of a document or section.
+    "... [some phrase] ..."
 
-    "&lbrack;RFC 2119&rbrack;: https://example.com"
+URL's of external link phrases SHOULD(#R5) be defined on separate
+lines.  Preferably at the end of a document or section.
 
-URL defined lines SHOULD(#R9) be removed from the final document.
+    "[some phrase]: https://example.com"
+
+Lines defining URL's for external link phrases MAY(#R9) be removed
+from the final document.
 
 
 §2.2.4 Internal Reference Links
