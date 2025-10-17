@@ -45,12 +45,14 @@ the requirements at it's source.  Differentiating changes in plain
 text is well defined, making it a powerful way of conveing changes
 over time.
 
+
 §1.1 Purpose
 
 Specify minimal format rules to plain-text documents which enables
-developers to use processing tools, like [stp], when producing the
-final document.  The final document in this context is a preformatted
-HTML file.
+developers to use tools, like [specification text processor (stp)],
+when producing the final document.  The final document in this
+context is a preformatted HTML file.
+
 
 §1.2 Requirements
 
@@ -182,7 +184,7 @@ Internal requirement links MUST(#R12) reference existing requirement.
 
 [example.com]: https://example.com
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
-[stp]: https://github.com/gregoryv/stp
+[specification text processor (stp)]: https://github.com/gregoryv/stp
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
 [syhoc/spec.txt]: https://github.com/gregoryv/syhoc/blob/main/spec.txt
 
