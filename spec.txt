@@ -148,7 +148,7 @@ Within a specification requirements are often related and have plenty
 of cross references.  Internal requirement links SHOULD(#R13) be
 written within square brackets.
 
-   "... see ([#R99]) ..."
+   "... see [#R99] ..."
 
 Internal requirement links MUST(#R12) reference existing requirement.
 
