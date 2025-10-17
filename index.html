@@ -41,6 +41,7 @@ Table of Contents
 <a href="#section-2.3.1">2.3.1</a>   Links to Sections  ..........................................
 <a href="#section-2.3.2">2.3.2</a>   External Links  .............................................
 <a href="#section-2.3.3">2.3.3</a>   Internal Reference Links  ...................................
+<a href="#section-2.3.4">2.3.4</a>   Internal Requirement Links  .................................
 <a href="#section-3">3</a>   References  .....................................................
 <a href="#section-A">A</a>   Appendix  .......................................................
 <a href="#section-A.1">A.1</a>   Requirements  .................................................
@@ -155,8 +156,19 @@ Table of Contents
 
        "... see [1] ..."
 
-   These links refer to a list of references in the same document.  In
-   this document see (<a href="#section-3">section 3</a>).
+   If a internal reference link is a positive integer it refer to a list
+   of references in the same document.  In this document see (<a href="#section-3">section 3</a>).
+
+
+<a id="section-2.3.4" href="#section-2.3.4">2.3.4</a> Internal Requirement Links
+
+   Within a specification requirements are often related and have plenty
+   of cross references.  Internal requirement links SHOULD<sub><a id="R13" href="#R13">13</a></sub> be
+   written within square brackets.
+
+      "... see ([#R99]) ..."
+
+   Internal requirement links MUST<sub><a id="R12" href="#R12">12</a></sub> reference existing requirement.
 
 
 
@@ -208,15 +220,24 @@ Table of Contents
    <a href="#R11">R11</a> Once a requirement identifier has been assigned and
        specification published, it MUST NOT be reused.
 
+   <a href="#R12">R12</a> Internal requirement links MUST reference existing requirement.
+
+   <a href="#R13">R13</a> Internal requirement links SHOULD be written within square
+       brackets.
+
 
 
 
 <a id="section-B" href="#section-B">B</a> Changelog
 
+   <a href="https://github.com/gregoryv/syhoc">0.2.0-dev</a>
+
+   - Add requirements <a href="#R12">R12</a>, <a href="#R13">R13</a>
+   - Rephrase requirement <a href="#R6">R6</a>
+
    <a href="https://github.com/gregoryv/syhoc/tree/v0.1.0">0.1.0</a>
 
    - Initial revision
-
 
 
 

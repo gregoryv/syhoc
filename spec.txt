@@ -136,8 +136,19 @@ brackets.
 
     "... see [1] ..."
 
-These links refer to a list of references in the same document.  In
-this document see (§3).
+If a internal reference link is a positive integer it refer to a list
+of references in the same document.  In this document see (§3).
+
+
+§2.3.4 Internal Requirement Links
+
+Within a specification requirements are often related and have plenty
+of cross references.  Internal requirement links SHOULD(#R13) be
+written within square brackets.
+
+   "... see ([#R99]) ..."
+
+Internal requirement links MUST(#R12) reference existing requirement.
 
 
 
