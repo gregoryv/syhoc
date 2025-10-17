@@ -158,7 +158,7 @@ this document see (§3).
 [example.com]: https://example.com
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
 [stp]: https://github.com/gregoryv/stp
-[source of this document]: https://gregoryv.github.io/water/spec.txt
+[source of this document]: https://gregoryv.github.io/syhoc/spec.txt
 
 
 
