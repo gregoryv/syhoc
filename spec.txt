@@ -22,7 +22,7 @@ Status of This Memo
 This document is not an Internet Standards Track specification; it is
 published for examination, experimental implementation, and
 evaluation.  The revision controlled source of this document is
-available at [syhoc/spec.txt].
+available at [gregoryv/syhoc].
 
 
 
@@ -68,7 +68,7 @@ document are to be interpreted as described in [RFC 2119] [1].
 §2 Format Rules
 
 Main purpose of formatting rules is to enable writers and readers to
-focus on content. Secondary purpose is enabling tools to process
+focus on content.  Secondary purpose is enabling tools to process
 specifications for improved presentation or automated consumption.
 The [source of this document] is written following these rules.
 
@@ -187,7 +187,7 @@ Internal requirement links MUST(#R12) reference existing requirement.
 [RFC 2119]: https://www.ietf.org/rfc/rfc2119
 [specification text processor (stp)]: https://github.com/gregoryv/stp
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
-[syhoc/spec.txt]: https://github.com/gregoryv/syhoc/blob/main/spec.txt
+[gregoryv/syhoc]: https://github.com/gregoryv/syhoc
 
 [0.3.0-dev]: https://github.com/gregoryv/syhoc/compare/v0.2.0...HEAD
 [0.2.0]: https://gregoryv.github.io/syhoc/v0.2.0
