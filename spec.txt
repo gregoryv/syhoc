@@ -32,10 +32,10 @@ Table of Contents
 
 §1 Introduction
 
-Plain-text documents, i.e. RFC series, have a proven track record as
+Plain-text documents, eg. RFC series, have a proven track record as
 workable specifications.  These documents have been enhanced and
 clarified over time by subsequent sepcifications like the [RFC 2119].
-Specifications that govern software are often written in this format.
+Specifications governing software are often written in this format.
 There is however no easy way to reference requirements directly when
 validating software.  A test suite could e.g. use the wording of a
 requirement verbatim if it fails, but duplicating the text within a
