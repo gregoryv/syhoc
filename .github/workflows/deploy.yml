@@ -3,15 +3,12 @@ name: Build and Deploy site
 on:
   push:
     branches: [ main ]
+    tags: [ 'v*' ]  # trigger on tags like v0.2.0
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 
 jobs:
   build:
@@ -20,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # required to access tags
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -29,21 +28,55 @@ jobs:
       - name: Install stp
         run: go install github.com/gregoryv/stp@484f7c5
 
-      - name: Generate index.html
-        run: stp -i spec.txt -o index.html
+      - name: Determine output directory
+        id: vars
+        run: |
+          if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
+            folder="${GITHUB_REF_NAME}"
+          else
+            folder="head"
+          fi
+          echo "folder=$folder" >> $GITHUB_OUTPUT
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Generate HTML
+        run: |
+          mkdir -p site/${{ steps.vars.outputs.folder }}
+          stp -i spec.txt -o site/${{ steps.vars.outputs.folder }}/index.html
+
+      - name: Generate index.html listing all versions
+        run: |
+          echo "<!DOCTYPE html>" > site/index.html
+          echo "<html><head><meta charset='utf-8'><title>Available versions</title></head><body>" >> site/index.html
+          echo "<h1>Available versions</h1><ul>" >> site/index.html
+
+          # If gh-pages already exists, list its directories to preserve links
+          git fetch origin gh-pages:gh-pages || true
+          if git show-ref --quiet refs/heads/gh-pages; then
+            git worktree add tmp gh-pages
+            for d in $(ls tmp); do
+              if [ -d "tmp/$d" ]; then
+                echo "<li><a href='$d/'>$d</a></li>" >> site/index.html
+              fi
+            done
+            git worktree remove tmp
+          fi
+
+          # Also add the folder generated in this run if not already listed
+          if ! grep -q "${{ steps.vars.outputs.folder }}" site/index.html; then
+            echo "<li><a href='${{ steps.vars.outputs.folder }}/'>${{ steps.vars.outputs.folder }}</a></li>" >> site/index.html
+          fi
+
+          echo "</ul></body></html>" >> site/index.html
+
+      - name: Disable Jekyll
+        run: touch site/.nojekyll
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: .
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: site
+          keep_files: true
+          allow_empty_commit: true
+            
