@@ -1,0 +1,13 @@
+Publish new release
+
+export TAG=v0.2.0
+export PREV=v0.1.0
+
+mkdir -p docs/$TAG
+git restore --source $TAG -- docs/$TAG/spec.txt
+
+cd docs/$TAG
+stp -i spec.txt -o index.html
+cd .. # move into docs so the diff titles are nice
+python3 pydiff.py -file-a $PREV/spec.txt -file-b $TAG/spec.txt -o $TAG/diff_$PREV.html
+# add an entry in docs/index.html
