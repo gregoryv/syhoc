@@ -1,12 +1,12 @@
-           Format rules for plain-text specifications
-
-                            by
-
-                      Gregory Vincic
-
+Version....: 0.3.0-dev
+Obsoletes..: [0.2.0]
+Author.....: Gregory Vincic
+Published..: YYYY-MM-DD
 
 
 
+
+             Format rules for plain-text specifications
 
 Abstract
 
@@ -22,12 +22,6 @@ This document is not an Internet Standards Track specification; it is
 published for examination, experimental implementation, and
 evaluation.  The revision controlled source of this document is
 available at [syhoc/spec.txt].
-
-Changelog
-
-[0.3.0-dev]
-[0.2.0] - 2025-10-18
-[0.1.0] - 2025-10-17
 
 
 
@@ -195,8 +189,8 @@ Internal requirement links MUST(#R12) reference existing requirement.
 [syhoc/spec.txt]: https://github.com/gregoryv/syhoc/blob/main/spec.txt
 
 [0.3.0-dev]: https://github.com/gregoryv/syhoc/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/gregoryv/syhoc/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/gregoryv/syhoc/blob/v0.1.0/spec.txt
+[0.2.0]: https://gregoryv.github.io/syhoc/v0.2.0
+
 
 
 
