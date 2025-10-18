@@ -1,4 +1,4 @@
-Version....: 0.3.0-dev
+Version....: [0.3.0-dev]
 Obsoletes..: [0.2.0]
 Author.....: Gregory Vincic
 Published..: YYYY-MM-DD
