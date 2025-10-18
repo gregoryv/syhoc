@@ -175,7 +175,7 @@ Internal requirement links MUST(#R12) reference existing requirement.
 
 §A Appendix
 
-§A.1 Requirements
+§A.1 List of Requirements
 
 <list of requirements>
 
