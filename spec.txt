@@ -68,8 +68,8 @@ document are to be interpreted as described in [RFC 2119] [1].
 §2 Format Rules
 
 Main purpose of formatting rules is to enable writers and readers to
-focus on content as much as possible and secondary enable tooling to
-process them for improved presentation or automated consumption.
+focus on content. Secondary purpose is enabling tools to process
+specifications for improved presentation or automated consumption.
 The [source of this document] is written following these rules.
 
 
