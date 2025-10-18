@@ -27,7 +27,7 @@ jobs:
           go-version: '1.24'  # or latest available
 
       - name: Install stp
-        run: go install github.com/gregoryv/stp@v0.10.0
+        run: go install github.com/gregoryv/stp@484f7c5
 
       - name: Generate index.html
         run: stp -i spec.txt -o index.html

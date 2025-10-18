@@ -23,6 +23,12 @@ published for examination, experimental implementation, and
 evaluation.  The revision controlled source of this document is
 available at [syhoc/spec.txt].
 
+Changelog
+
+[0.2.0] - 2025-10-18
+[0.1.0] - 2025-10-17
+
+
 
 
 Table of Contents
@@ -175,7 +181,6 @@ Internal requirement links MUST(#R12) reference existing requirement.
 
 
 
-<cat changelog.txt>
 
 
 
@@ -188,6 +193,8 @@ Internal requirement links MUST(#R12) reference existing requirement.
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
 [syhoc/spec.txt]: https://github.com/gregoryv/syhoc/blob/main/spec.txt
 
+[0.2.0]: https://github.com/gregoryv/syhoc/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/gregoryv/syhoc/blob/v0.1.0/spec.txt
 
 
 
