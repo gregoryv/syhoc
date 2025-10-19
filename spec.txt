@@ -1,7 +1,7 @@
 Version....: [0.3.0]
 Obsoletes..: [0.2.0]
 Author.....: Gregory Vincic
-Published..: 2025-10-19
+Published..: YYYY-MM-DD
 
 
 
@@ -90,17 +90,13 @@ parenthesis and start with '#R' followed by a number.
     "... (#R7) ..."
 
 Requirement identifiers MUST(#R10) be unique within one
-specification.
-
-Once a requirement identifier has been assigned and specification
-published, it MUST NOT(#R11) be reused.
+specification.  Once a requirement identifier has been assigned and
+specification published, it MUST NOT(#R11) be reused.  Requirement
+identifiers MUST(#R8) be placed directly after one of the keywords as
+defined by [RFC 2119].
 
 
 §2.3 Links
-
-Reuirement links MUST(#R8) be placed directly after one of the
-keywords as defined by [RFC 2119].
-
 
 §2.3.1 Links to Sections
 
