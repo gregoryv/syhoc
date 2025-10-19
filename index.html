@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<pre>
+   Version....: <a href="https://gregoryv.github.io/syhoc/v0.3.0">0.3.0</a>
+   Obsoletes..: <a href="https://gregoryv.github.io/syhoc/v0.2.0">0.2.0</a>
+   Author.....: Gregory Vincic
+   Published..: YYYY-MM-DD
+
+
+
+
+                Format rules for plain-text specifications
+
+Abstract
+
+   Specifications need to be concise and correct.  Preformated
+   plain-text documents are easy to read and many follow <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a> when
+   phrasing requirements.  This document defines rules for authoring
+   plain-text specifications and tagging requirements with identifiers
+   for easy reference.
+
+
+Status of This Memo
+
+   This document is not an Internet Standards Track specification; it is
+   published for examination, experimental implementation, and
+   evaluation.  The revision controlled source of this document is
+   available at <a href="https://github.com/gregoryv/syhoc">gregoryv/syhoc</a>.
+
+
+
+
+Table of Contents
+
+<a href="#section-1">1</a>   Introduction  ...................................................
+<a href="#section-1.1">1.1</a>   Purpose  ......................................................
+<a href="#section-1.2">1.2</a>   Requirements  .................................................
+<a href="#section-2">2</a>   Format Rules  ...................................................
+<a href="#section-2.1">2.1</a>   Sections  .....................................................
+<a href="#section-2.2">2.2</a>   Requirement Identifiers  ......................................
+<a href="#section-2.3">2.3</a>   Links  ........................................................
+<a href="#section-2.3.1">2.3.1</a>   Links to Sections  ..........................................
+<a href="#section-2.3.2">2.3.2</a>   External Links  .............................................
+<a href="#section-2.3.3">2.3.3</a>   Internal Reference Links  ...................................
+<a href="#section-2.3.4">2.3.4</a>   Internal Requirement Links  .................................
+<a href="#section-3">3</a>   References  .....................................................
+<a href="#section-A">A</a>   Appendix  .......................................................
+<a href="#section-A.1">A.1</a>   List of Requirements  .........................................
+
+
+
+
+<a id="section-1" href="#section-1">1</a> Introduction
+
+   Plain-text documents, eg. RFC series, have a proven track record as
+   workable specifications.  These documents have been enhanced and
+   clarified over time by subsequent sepcifications like the <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>.
+   Specifications governing software are often written in this format.
+   There is however no easy way to reference such requirements throught
+   a body of text.  A test suite could e.g. use the wording of a
+   requirement verbatim if it fails, but duplicating the text within a
+   test is not feasible as requirements change over time.  Having a way
+   to easily index all requirements and reference them elsewhere keeps
+   the requirements at it's source.  Differentiating changes in plain
+   text is well defined, making it a powerful way of conveing
+   requirement changes over time.
+
+
+<a id="section-1.1" href="#section-1.1">1.1</a> Purpose
+
+   Specify minimal format rules to plain-text documents which enables
+   developers to use tools, like <a href="https://github.com/gregoryv/stp">specification text processor (stp)</a>,
+   when producing the final document.  The final document in this
+   context is a preformatted HTML file.
+
+
+<a id="section-1.2" href="#section-1.2">1.2</a> Requirements
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a> [<a href="#ref-1">1</a>].
+
+
+
+
+<a id="section-2" href="#section-2">2</a> Format Rules
+
+   Main purpose of formatting rules is to enable writers and readers to
+   focus on content.  Secondary purpose is enabling tools to process
+   specifications for improved presentation or automated consumption.
+   The <a href="https://gregoryv.github.io/syhoc/spec.txt">source of this document</a> is written following these rules.
+
+
+<a id="section-2.1" href="#section-2.1">2.1</a> Sections
+
+   Sections SHOULD<sub><a id="R1" href="#R1">1</a></sub> start with the § sign followed by a level and a
+   heading.
+
+       "§9.1 Example Heading..."
+
+
+<a id="section-2.2" href="#section-2.2">2.2</a> Requirement Identifiers
+
+   Without requirement identifiers it's hard to reference them at the
+   source.  Requirement identifiers SHOULD<sub><a id="R7" href="#R7">7</a></sub> be written within
+   parenthesis and start with '#R' followed by a number.
+
+       "... (#R7) ..."
+
+   Requirement identifiers MUST<sub><a id="R10" href="#R10">10</a></sub> be unique within one
+   specification.
+
+   Once a requirement identifier has been assigned and specification
+   published, it MUST NOT<sub><a id="R11" href="#R11">11</a></sub> be reused.
+
+
+<a id="section-2.3" href="#section-2.3">2.3</a> Links
+
+   Reuirement links MUST<sub><a id="R8" href="#R8">8</a></sub> be placed directly after one of the
+   keywords as defined by <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>.
+
+
+<a id="section-2.3.1" href="#section-2.3.1">2.3.1</a> Links to Sections
+
+   Links to sections MUST<sub><a id="R2" href="#R2">2</a></sub> be written within parentheses.
+
+       "... (§9.1) ..."
+
+   Transformed links to sections SHOULD<sub><a id="R3" href="#R3">3</a></sub> replace the § sign with the
+   word 'section'.
+
+       "... (section 9.1) ..."
+
+
+<a id="section-2.3.2" href="#section-2.3.2">2.3.2</a> External Links
+
+   Within a body of test external links and their URL make them less
+   readable.  By separating the phrase that should be linked and the URL
+   readability is improved.
+
+   External link phrase SHOULD<sub><a id="R4" href="#R4">4</a></sub> be written within square brackets.
+
+       "... [some phrase] ..."
+
+   URL's of external link phrases SHOULD<sub><a id="R5" href="#R5">5</a></sub> be defined on separate
+   lines.  Preferably at the end of a document or section.
+
+       "[some phrase]: https://example.com"
+
+   Lines defining URL's for external link phrases MAY<sub><a id="R9" href="#R9">9</a></sub> be removed
+   from the final document.
+
+
+<a id="section-2.3.3" href="#section-2.3.3">2.3.3</a> Internal Reference Links
+
+   Internal reference links SHOULD<sub><a id="R6" href="#R6">6</a></sub> be written within square
+   brackets.
+
+       "... see [1] ..."
+
+   If a internal reference link is a positive integer it refer to a list
+   of references in the same document.  In this document see (<a href="#section-3">section 3</a>).
+
+
+<a id="section-2.3.4" href="#section-2.3.4">2.3.4</a> Internal Requirement Links
+
+   Within a specification requirements are often related and have plenty
+   of cross references.  Internal requirement links SHOULD<sub><a id="R13" href="#R13">13</a></sub> be
+   written within square brackets.
+
+      "... see [#R99] ..."
+
+   Internal requirement links MUST<sub><a id="R12" href="#R12">12</a></sub> reference existing requirement.
+
+
+
+
+<a id="section-3" href="#section-3">3</a> References
+
+   [<a id="ref-1" href="#ref-1">1</a>] Bradner, S., "Key words for use in RFCs to Indicate Requirement
+       Levels", BCP 14, <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>, March 1997.
+
+
+
+				* * *
+
+
+
+
+<a id="section-A" href="#section-A">A</a> Appendix
+
+<a id="section-A.1" href="#section-A.1">A.1</a> List of Requirements
+
+
+   <a href="#R1">R1</a> Sections SHOULD start with the § sign followed by a level and a
+      heading.
+
+   <a href="#R2">R2</a> Links to sections MUST be written within parentheses.
+
+   <a href="#R3">R3</a> Transformed links to sections SHOULD replace the § sign with the
+      word 'section'.
+
+   <a href="#R4">R4</a> External link phrase SHOULD be written within square brackets.
+
+   <a href="#R5">R5</a> URL's of external link phrases SHOULD be defined on separate
+      lines.
+
+   <a href="#R6">R6</a> Internal reference links SHOULD be written within square
+      brackets.
+
+   <a href="#R7">R7</a> Requirement identifiers SHOULD be written within parenthesis and
+      start with '#R' followed by a number.
+
+   <a href="#R8">R8</a> Reuirement links MUST be placed directly after one of the
+      keywords as defined by <a href="https://www.ietf.org/rfc/rfc2119">RFC 2119</a>.
+
+   <a href="#R9">R9</a> Lines defining URL's for external link phrases MAY be removed
+      from the final document.
+
+   <a href="#R10">R10</a> Requirement identifiers MUST be unique within one specification.
+
+   <a href="#R11">R11</a> Once a requirement identifier has been assigned and
+       specification published, it MUST NOT be reused.
+
+   <a href="#R12">R12</a> Internal requirement links MUST reference existing requirement.
+
+   <a href="#R13">R13</a> Internal requirement links SHOULD be written within square
+       brackets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+<!-- GENERATED by github.com/gregoryv/stp. DO NOT EDIT! -->

@@ -1,0 +1,240 @@
+Version....: [0.3.0]
+Obsoletes..: [0.2.0]
+Author.....: Gregory Vincic
+Published..: 2025-10-19
+
+
+
+
+             Format rules for plain-text specifications
+
+Abstract
+
+Specifications need to be concise and correct.  Preformated
+plain-text documents are easy to read and many follow [RFC 2119] when
+phrasing requirements.  This document defines rules for authoring
+plain-text specifications and tagging requirements with identifiers
+for easy reference.
+
+
+Status of This Memo
+
+This document is not an Internet Standards Track specification; it is
+published for examination, experimental implementation, and
+evaluation.  The revision controlled source of this document is
+available at [gregoryv/syhoc].
+
+
+
+
+Table of Contents
+
+
+
+
+§1 Introduction
+
+Plain-text documents, eg. RFC series, have a proven track record as
+workable specifications.  These documents have been enhanced and
+clarified over time by subsequent sepcifications like the [RFC 2119].
+Specifications governing software are often written in this format.
+There is however no easy way to reference such requirements throught
+a body of text.  A test suite could e.g. use the wording of a
+requirement verbatim if it fails, but duplicating the text within a
+test is not feasible as requirements change over time.  Having a way
+to easily index all requirements and reference them elsewhere keeps
+the requirements at it's source.  Differentiating changes in plain
+text is well defined, making it a powerful way of conveing
+requirement changes over time.
+
+
+§1.1 Purpose
+
+Specify minimal format rules to plain-text documents which enables
+developers to use tools, like [specification text processor (stp)],
+when producing the final document.  The final document in this
+context is a preformatted HTML file.
+
+
+§1.2 Requirements
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+document are to be interpreted as described in [RFC 2119] [1].
+
+
+
+
+§2 Format Rules
+
+Main purpose of formatting rules is to enable writers and readers to
+focus on content.  Secondary purpose is enabling tools to process
+specifications for improved presentation or automated consumption.
+The [source of this document] is written following these rules.
+
+
+§2.1 Sections
+
+Sections SHOULD(#R1) start with the § sign followed by a level and a
+heading.
+
+    "§9.1 Example Heading..."
+
+
+§2.2 Requirement Identifiers
+
+Without requirement identifiers it's hard to reference them at the
+source.  Requirement identifiers SHOULD(#R7) be written within
+parenthesis and start with '#R' followed by a number.
+
+    "... (#R7) ..."
+
+Requirement identifiers MUST(#R10) be unique within one
+specification.
+
+Once a requirement identifier has been assigned and specification
+published, it MUST NOT(#R11) be reused.
+
+
+§2.3 Links
+
+Reuirement links MUST(#R8) be placed directly after one of the
+keywords as defined by [RFC 2119].
+
+
+§2.3.1 Links to Sections
+
+Links to sections MUST(#R2) be written within parentheses.
+
+    "... (§9.1) ..."
+
+Transformed links to sections SHOULD(#R3) replace the § sign with the
+word 'section'.
+
+    "... (section 9.1) ..."
+
+
+§2.3.2 External Links
+
+Within a body of test external links and their URL make them less
+readable.  By separating the phrase that should be linked and the URL
+readability is improved.
+
+External link phrase SHOULD(#R4) be written within square brackets.
+
+    "... [some phrase] ..."
+
+URL's of external link phrases SHOULD(#R5) be defined on separate
+lines.  Preferably at the end of a document or section.
+
+    "[some phrase]: https://example.com"
+
+Lines defining URL's for external link phrases MAY(#R9) be removed
+from the final document.
+
+
+§2.3.3 Internal Reference Links
+
+Internal reference links SHOULD(#R6) be written within square
+brackets.
+
+    "... see [1] ..."
+
+If a internal reference link is a positive integer it refer to a list
+of references in the same document.  In this document see (§3).
+
+
+§2.3.4 Internal Requirement Links
+
+Within a specification requirements are often related and have plenty
+of cross references.  Internal requirement links SHOULD(#R13) be
+written within square brackets.
+
+   "... see [#R99] ..."
+
+Internal requirement links MUST(#R12) reference existing requirement.
+
+
+
+
+§3 References
+
+[1] Bradner, S., "Key words for use in RFCs to Indicate Requirement
+    Levels", BCP 14, [RFC 2119], March 1997.
+
+
+
+				* * *
+
+
+
+
+§A Appendix
+
+§A.1 List of Requirements
+
+<list of requirements>
+
+
+
+
+
+
+
+<!-- links are excluded from final output -->
+
+[example.com]: https://example.com
+[RFC 2119]: https://www.ietf.org/rfc/rfc2119
+[specification text processor (stp)]: https://github.com/gregoryv/stp
+[source of this document]: https://gregoryv.github.io/syhoc/spec.txt
+[gregoryv/syhoc]: https://github.com/gregoryv/syhoc
+
+[0.3.0]: https://gregoryv.github.io/syhoc/v0.3.0
+[0.2.0]: https://gregoryv.github.io/syhoc/v0.2.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
