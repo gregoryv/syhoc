@@ -83,17 +83,15 @@ heading.
 
 §2.2 Requirement Identifiers
 
-Without requirement identifiers it's hard to reference them at the
-source.  Requirement identifiers SHOULD(#R7) be written within
-parenthesis and start with '#R' followed by a number.
+Without requirement identifiers it's difficult to reference them.
+Requirement identifiers SHOULD(#R7) be written within parenthesis and
+start with '#R' followed by a number.  Requirement identifiers
+MUST(#R10) be unique within one specification.  Once a requirement
+identifier has been assigned and specification published, it MUST
+NOT(#R11) be reused.  Requirement identifiers MUST(#R8) be placed
+directly after one of the keywords as defined by [RFC 2119].
 
-    "... (#R7) ..."
-
-Requirement identifiers MUST(#R10) be unique within one
-specification.  Once a requirement identifier has been assigned and
-specification published, it MUST NOT(#R11) be reused.  Requirement
-identifiers MUST(#R8) be placed directly after one of the keywords as
-defined by [RFC 2119].
+    "... MUST NOT(#R999) .."
 
 
 §2.3 Links
