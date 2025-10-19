@@ -1,7 +1,7 @@
-Version....: [0.3.0-dev]
+Version....: [0.3.0]
 Obsoletes..: [0.2.0]
 Author.....: Gregory Vincic
-Published..: YYYY-MM-DD
+Published..: 2025-10-19
 
 
 
@@ -189,7 +189,7 @@ Internal requirement links MUST(#R12) reference existing requirement.
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
 [gregoryv/syhoc]: https://github.com/gregoryv/syhoc
 
-[0.3.0-dev]: https://github.com/gregoryv/syhoc/compare/v0.2.0...HEAD
+[0.3.0]: https://gregoryv.github.io/syhoc/v0.3.0
 [0.2.0]: https://gregoryv.github.io/syhoc/v0.2.0
 
 
