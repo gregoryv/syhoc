@@ -1,11 +1,3 @@
-Version....: [0.3.1]
-Obsoletes..: [0.3.0]
-Author.....: Gregory Vincic
-Published..: 2025-10-23
-
-
-
-
              Format rules for plain-text specifications
 
 Abstract
@@ -183,8 +175,7 @@ Internal requirement links MUST(#R12) reference existing requirement.
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
 [gregoryv/syhoc]: https://github.com/gregoryv/syhoc
 
-[0.3.1]: https://gregoryv.github.io/syhoc/v0.3.1
-[0.3.0]: https://gregoryv.github.io/syhoc/v0.3.0
+
 
 
 
