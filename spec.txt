@@ -67,7 +67,7 @@ The [source of this document] is written following these rules.
 
 §2.1 Sections
 
-Sections SHOULD(#R1) start with the § sign followed by a level and a
+Sections SHOULD(R1) start with the § sign followed by a level and a
 heading.
 
     "§9.1 Example Heading..."
@@ -76,25 +76,25 @@ heading.
 §2.2 Requirement Identifiers
 
 Without requirement identifiers it's difficult to reference them.
-Requirement identifiers SHOULD(#R7) be written within parenthesis and
-start with '#R' followed by a number.  Requirement identifiers
-MUST(#R10) be unique within one specification.  Once a requirement
+Requirement identifiers SHOULD(R7) be written within parenthesis and
+start with 'R' followed by a number.  Requirement identifiers
+MUST(R10) be unique within one specification.  Once a requirement
 identifier has been assigned and specification published, it MUST
-NOT(#R11) be reused.  Requirement identifiers MUST(#R8) be placed
+NOT(R11) be reused.  Requirement identifiers MUST(R8) be placed
 directly after one of the keywords as defined by [RFC 2119].
 
-    "... MUST NOT(#R999) .."
+    "... MUST NOT(R999) .."
 
 
 §2.3 Links
 
 §2.3.1 Links to Sections
 
-Links to sections MUST(#R2) be written within parentheses.
+Links to sections MUST(R2) be written within parentheses.
 
     "... (§9.1) ..."
 
-Transformed links to sections SHOULD(#R3) replace the § sign with the
+Transformed links to sections SHOULD(R3) replace the § sign with the
 word 'section'.
 
     "... (section 9.1) ..."
@@ -106,22 +106,22 @@ Within a body of test external links and their URL make them less
 readable.  By separating the phrase that should be linked and the URL
 readability is improved.
 
-External link phrase SHOULD(#R4) be written within square brackets.
+External link phrase SHOULD(R4) be written within square brackets.
 
     "... [some phrase] ..."
 
-URL's of external link phrases SHOULD(#R5) be defined on separate
+URL's of external link phrases SHOULD(R5) be defined on separate
 lines.  Preferably at the end of a document or section.
 
     "[some phrase]: https://example.com"
 
-Lines defining URL's for external link phrases MAY(#R9) be removed
+Lines defining URL's for external link phrases MAY(R9) be removed
 from the final document.
 
 
 §2.3.3 Internal Reference Links
 
-Internal reference links SHOULD(#R6) be written within square
+Internal reference links SHOULD(R6) be written within square
 brackets.
 
     "... see [1] ..."
@@ -133,12 +133,12 @@ of references in the same document.  In this document see (§3).
 §2.3.4 Internal Requirement Links
 
 Within a specification requirements are often related and have plenty
-of cross references.  Internal requirement links SHOULD(#R13) be
+of cross references.  Internal requirement links SHOULD(R13) be
 written within square brackets.
 
    "... see [#R99] ..."
 
-Internal requirement links MUST(#R12) reference existing requirement.
+Internal requirement links MUST(R12) reference existing requirement.
 
 
 
