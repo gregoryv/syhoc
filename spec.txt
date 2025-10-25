@@ -36,7 +36,7 @@ document are to be interpreted as described in [RFC 2119].
 Requirement identifiers SHOULD(R1) be written within parenthesis and
 start with 'R' followed by a number.  Requirement identifiers
 MUST(R2) be unique within one specification.  Requirement identifiers
-MUST(R4) be placed directly after one of the keywords as defined by
+MUST(R3) be placed directly after one of the keywords as defined by
 [RFC 2119].
 
 Example;
