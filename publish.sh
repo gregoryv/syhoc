@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/bash -e
 
 [[ -z $PREV ]] && echo "set PREV" && exit 1
 
 export REL=$1
+export TAG=$1
 [[ -z $REL ]] && export TAG=main && export REL="unreleased"
 
 
@@ -13,13 +14,12 @@ export stp=stp
 #
 #  EIDT docs/$TAG/spec.txt and add header
 #
-echo "Version....: [${REL#v}]
+echo "Version....: ${REL#v}
 Obsoletes..: [${PREV#v}]
 Published..: $DATE
 Author.....: Gregory Vincic
 
-[${TAG#v}]: https://gregoryv.github.io/syhoc/$REL
-[${PREV#v}]: https://gregoryv.github.io/syhoc/$PREV
+[${PREV#v}]: diff_$PREV.html
 " > header.txt
 
 set -o xtrace
