@@ -1,16 +1,37 @@
 Publish new release
 
-export TAG=v0.3.1
-export PREV=v0.3.0
+export TAG=v0.4.0
+export PREV=v0.3.1
+export DATE=$(date -u +%F)
+export stp=stp
+
+#
+#  EIDT docs/$TAG/spec.txt and add header
+#
+echo "Version....: [${TAG#v}]
+Obsoletes..: [${PREV#v}]
+Published..: $DATE
+Author.....: Gregory Vincic
+
+[${TAG#v}]: https://gregoryv.github.io/syhoc/$TAG
+[${PREV#v}]: https://gregoryv.github.io/syhoc/$PREV
+" > header.txt
+
 
 mkdir -p docs/$TAG
 git restore --source $TAG -- spec.txt
-mv spec.txt docs/$TAG
+cp spec.txt docs/$TAG
 
-cd docs/$TAG
-stp-v0.10.0 -i spec.txt -o index.html
-cd .. # move into docs so the diff titles are nice
+# Generate published version
+$stp -i template.txt -o docs/$TAG/index.html
+
+# move into docs so the diff titles are nice
+pushd docs
 python3 pydiff.py -file-a $PREV/spec.txt -file-b $TAG/spec.txt -o $TAG/diff_$PREV.html
+popd
+
+# rm spec.txt
+
 
 #
 # add an entry in docs/index.html
