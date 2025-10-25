@@ -33,12 +33,12 @@ document are to be interpreted as described in [RFC 2119].
 
 §2 Requirement Identifier Syntax
 
-Requirement identifiers SHOULD(R1) be written within parenthesis and
-start with 'R' followed by a number.  Requirement identifiers
-MUST(R3) be placed directly after one of the keywords as defined by
-[RFC 2119].  This combination is less likely to conflict with normal
-wording and use of parenthesis within a document.  Requirement
-identifiers MUST(R2) be unique within one specification.
+Requirement identifiers MUST(R1) be placed directly after keywords as
+defined by [RFC 2119].  Requirement identifiers SHOULD(R2) be written
+within parenthesis and start with 'R' followed by a number.  This
+combination is less likely to conflict with normal wording and use of
+parenthesis within a document.  Requirement identifiers MUST(R3) be
+unique within one specification.
 
 Example;
 
@@ -52,6 +52,9 @@ It is RECOMMENDED(R4) that authors do not use identifier series for
 grouping, e.g. identifiers within the R100 series are used for
 feature X and R200 series for feature Y.  It is also RECOMMENDED(R5)
 that authors not change identifiers for one requirement over time.
+This is however likely to happen more during authoring and reviewing
+phase but should be avoided once a specification is published.
+
 
 
 <!-- links are excluded from final output -->
