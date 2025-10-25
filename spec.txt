@@ -35,9 +35,10 @@ document are to be interpreted as described in [RFC 2119].
 
 Requirement identifiers SHOULD(R1) be written within parenthesis and
 start with 'R' followed by a number.  Requirement identifiers
-MUST(R2) be unique within one specification.  Requirement identifiers
 MUST(R3) be placed directly after one of the keywords as defined by
-[RFC 2119].
+[RFC 2119].  This combination is less likely to conflict with normal
+wording and use of parenthesis within a document.  Requirement
+identifiers MUST(R2) be unique within one specification.
 
 Example;
 
@@ -45,6 +46,12 @@ Example;
     "... SHOULD ..."      missing identifier
     "... MAY (R1) ..."    error spacing after keyword
     "... SHOULD\nNOT(R1)" ok when keyword split over two lines
+
+
+It is RECOMMENDED(R4) that authors do not use identifier series for
+grouping, e.g. identifiers within the R100 series are used for
+feature X and R200 series for feature Y.  It is also RECOMMENDED(R5)
+that authors not change identifiers for one requirement over time.
 
 
 <!-- links are excluded from final output -->
