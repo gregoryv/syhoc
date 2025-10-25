@@ -15,7 +15,7 @@ to augment such requirements with identifiers for easy reference.
 §1 Introduction
 
 Being able to reference a requirement within a large document aids
-many stakeholders within a project.  Author and reviewer while the
+many stakeholders within projects.  Author and reviewer while the
 specification is being written and discussed.  The developer during
 implementation and testing.  Customer while accepting the final
 product.
