@@ -52,10 +52,9 @@ document are to be interpreted as described in [RFC 2119] [1].
 
 Requirement identifiers SHOULD(R1) be written within parenthesis and
 start with 'R' followed by a number.  Requirement identifiers
-MUST(R2) be unique within one specification.  Once a requirement
-identifier has been assigned and specification published, it MUST
-NOT(R3) be reused.  Requirement identifiers MUST(R4) be placed
-directly after one of the keywords as defined by [RFC 2119].
+MUST(R2) be unique within one specification.  Requirement identifiers
+MUST(R4) be placed directly after one of the keywords as defined by
+[RFC 2119].
 
 
 Example;
