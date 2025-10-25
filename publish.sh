@@ -1,7 +1,9 @@
-Publish new release
+#!/bin/bash
 
-export TAG=v0.4.0
-export PREV=v0.3.1
+[[ -z $PREV ]] && echo "set PREV" && exit 1
+[[ -z $TAG ]] && export TAG=main
+
+export DEST=docs/$TAG
 export DATE=$(date -u +%F)
 export stp=stp
 
@@ -17,20 +19,20 @@ Author.....: Gregory Vincic
 [${PREV#v}]: https://gregoryv.github.io/syhoc/$PREV
 " > header.txt
 
-
-mkdir -p docs/$TAG
+set -o xtrace
+mkdir -p $DEST
 git restore --source $TAG -- spec.txt
-cp spec.txt docs/$TAG
+cp spec.txt $DEST
 
 # Generate published version
-$stp -i template.txt -o docs/$TAG/index.html
+$stp -i template.txt -o $DEST/index.html
 
 # move into docs so the diff titles are nice
 pushd docs
 python3 pydiff.py -file-a $PREV/spec.txt -file-b $TAG/spec.txt -o $TAG/diff_$PREV.html
 popd
 
-# rm spec.txt
+rm spec.txt
 
 
 #

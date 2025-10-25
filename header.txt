@@ -1,8 +1,8 @@
-Version....: [0.4.0]
+Version....: [main]
 Obsoletes..: [0.3.1]
-Published..: 
+Published..: 2025-10-25
 Author.....: Gregory Vincic
 
-[0.4.0]: https://gregoryv.github.io/syhoc/v0.4.0
+[main]: https://gregoryv.github.io/syhoc/main
 [0.3.1]: https://gregoryv.github.io/syhoc/v0.3.1
 
