@@ -1,7 +1,10 @@
       Identify requirements within plain-text specifications
 
+Status of This Memo
 
-
+This document is not an Internet Standards Track specification; it is
+published for examination, experimental implementation, and
+evaluation.
 
 Abstract
 
@@ -9,44 +12,24 @@ Plain-text specifications are readable and many follow [RFC 2119]
 when phrasing requirements.  This specification introduces a syntax
 to augment such requirements with identifiers for easy reference.
 
-
-Status of This Memo
-
-This document is not an Internet Standards Track specification; it is
-published for examination, experimental implementation, and
-evaluation.  The revision controlled source of this document is
-available at [gregoryv/syhoc].
-
-
 §1 Introduction
 
-Plain-text documents, eg. RFC series, have a proven track record as
-workable specifications.  They have been enhanced and clarified by
-subsequent sepcifications like the [RFC 2119].  There is however no
-easy way to reference such requirements throught a body of text.
 Being able to reference a requirement within a large document aids
-the author, reviewer and finally the developer.  Author and reviewer
-while the specification is being written and discussed.  The
-developer during implementation and testing.
+many stakeholders within a project.  Author and reviewer while the
+specification is being written and discussed.  The developer during
+implementation and testing.  Customer while accepting the final
+product.
 
 A test suite could e.g. use the wording of a requirement verbatim if
 it fails, by parsing the referenced requirement.  Having a way to
 easily index all requirements and reference them elsewhere keeps the
 requirements at it's source.
 
-
-§1.1 Purpose
-
-Introduce a syntax to identify requirements following [RFC 2119]
-within plain-text documents.
-
-
 §1.2 Requirements
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-document are to be interpreted as described in [RFC 2119] [1].
-
+document are to be interpreted as described in [RFC 2119].
 
 §2 Requirement Identifier Syntax
 
@@ -56,46 +39,12 @@ MUST(R2) be unique within one specification.  Requirement identifiers
 MUST(R4) be placed directly after one of the keywords as defined by
 [RFC 2119].
 
-
 Example;
 
     "... MUST NOT(R1) .." ok
     "... SHOULD ..."      missing identifier
     "... MAY (R1) ..."    error spacing after keyword
-    "... SHOULD\nNOT(R1)" ok when keyword on multiple lines
-
-
-
-
-
-
-
-
-
-
-
-§3 References
-
-[1] Bradner, S., "Key words for use in RFCs to Indicate Requirement
-    Levels", BCP 14, [RFC 2119], March 1997.
-
-
-
-				* * *
-
-
-
-
-§A Appendix
-
-§A.1 List of Requirements
-
-<list of requirements>
-
-
-
-
-
+    "... SHOULD\nNOT(R1)" ok when keyword split over two lines
 
 
 <!-- links are excluded from final output -->
@@ -105,8 +54,6 @@ Example;
 [specification text processor (stp)]: https://github.com/gregoryv/stp
 [source of this document]: https://gregoryv.github.io/syhoc/spec.txt
 [gregoryv/syhoc]: https://github.com/gregoryv/syhoc
-
-
 
 
 
